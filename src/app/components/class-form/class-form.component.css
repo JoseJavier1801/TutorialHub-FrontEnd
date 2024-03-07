@@ -1,0 +1,44 @@
+@import 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css';
+/* Estilo para el contenedor principal */
+.container {
+  background-color: rgb(83, 92, 102);
+  opacity: 97%;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para los elementos del formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para el botón de localización */
+.btn-primary {
+  margin-top: 10px;
+}
+
+/* Estilo para el mensaje de activación de la localización */
+.text-success {
+  color: green;
+}
+
+/* Estilo para los botones de submit y cerrar */
+.btn-primary,
+.btn-secondary {
+  margin-right: 10px;
+}
+
+/* Estilo para el icono del botón de submit */
+.bi-database-fill-add {
+  margin-right: 5px;
+}
+
+/* Añade estilos adicionales según tus necesidades */

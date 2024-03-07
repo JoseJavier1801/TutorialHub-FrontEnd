@@ -1,0 +1,16 @@
+<div class="settings-container">
+    <button class="settings-button" (click)="toggleMenu()">Ajustes</button>
+    <div class="settings-menu" *ngIf="showMenu">
+        <ul>
+            <li (click)="deleteProfile()">Eliminar perfil</li>
+            <li (click)="openEditProfile()">Modificar perfil</li>
+        </ul>
+    </div>
+    <!-- Ventana emergente para editar perfil del usuario -->
+<app-edit-profile *ngIf="showEditProfile" (cancelEditEvent)="cancelEditProfile()"></app-edit-profile>
+
+    
+    <!-- Ventana emergente para editar perfil del profesor -->
+    <app-edit-teacher-profile *ngIf="showEditProfile && isTeacher"  (closeEditEvent)="closeEditTeacherProfile()"></app-edit-teacher-profile>
+</div>
+

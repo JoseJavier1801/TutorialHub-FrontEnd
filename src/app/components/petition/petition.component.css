@@ -1,0 +1,52 @@
+.petition-container {
+ background-color: #007bff;
+  padding: 20px; /* Aumenta el relleno para un aspecto más elegante */
+  margin: 20px; /* Aumenta el margen para separar visualmente de otros elementos */
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.petition-form {
+  display: grid;
+  gap: 20px; /* Aumenta el espacio entre los elementos del formulario */
+}
+
+.error {
+  border: 2px solid red;
+}
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Hacer el botón ocupar todo el ancho del contenedor */
+  }
+
+button.gray-button {
+  background-color: #ccc;
+  color: #fff;
+}
+
+button.blue-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px; /* Espaciado superior más pequeño para el mensaje de error */
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.confirmation-message {
+  margin-top: 15px; /* Aumenta el margen superior para separar el mensaje de los botones */
+  color: green;
+  font-weight: bold;
+}

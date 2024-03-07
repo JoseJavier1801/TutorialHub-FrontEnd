@@ -1,0 +1,25 @@
+<div class="background-container">
+    <br>
+    <!-- Mostrar el menú desplegable de opciones solo si el usuario es un profesor -->
+
+
+    <!-- Mostrar el componente de perfil de usuario o de profesor según el tipo de usuario -->
+    <app-my-profile *ngIf="!isTeacher"></app-my-profile>
+    <app-teacher-profile *ngIf="isTeacher"></app-teacher-profile>
+
+    <!-- Mostrar el botón para crear una nueva clase solo si el usuario es un profesor -->
+    <div class="button-container" *ngIf="isTeacher">
+        <button class="rounded-button" (click)="openClassFormDialog()">Crear Nueva Clase</button>
+    </div>
+
+    <app-class-form *ngIf="showClassForm" (close)="closeClassFormDialog()"
+        (addClass)="addClass($event)"></app-class-form>
+
+    <!-- Iterar sobre el array de clases y mostrar las tarjetas en filas de 4 -->
+    <br>
+    <div class="row class-card-container justify-content-md-center justify-content-sm-end">
+        <div *ngFor="let classData of classes" class="col-md-3 mb-4">
+            <app-class-card-component [classData]="classData"></app-class-card-component>
+        </div>
+    </div>
+</div>

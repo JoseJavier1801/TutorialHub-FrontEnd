@@ -1,0 +1,92 @@
+.profile-container {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 40px auto;
+  width: 100%;
+  max-width: 800px;
+  font-family: 'Arial', sans-serif;
+}
+
+.profile-header h2 {
+  color: #333333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.teacher-photo {
+  width: 150px;
+  height: 150px;
+}
+.profile-image-container {
+  margin-top: 20px;
+}
+
+.profile-image-container img {
+  width: 10px; /* Nuevo tamaño */
+  height: 10px; /* Nuevo tamaño */
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 25px;
+}
+.profile-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.profile-info {
+  text-align: left;
+  width: 100%;
+}
+
+.profile-info p {
+  margin: 15px 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.settings-button-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.settings-button-container app-settings {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.settings-button-container app-settings:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333333;
+  padding: 12px 20px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}

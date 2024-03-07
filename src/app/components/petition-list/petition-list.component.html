@@ -1,0 +1,31 @@
+<div *ngFor="let petition of petitions" class="petition-item"
+    [style.backgroundColor]="getBackgroundColor(petition.state)">
+    <!-- informacion de la petición  tanto de el usuario como de la clase-->
+    <h3>Petición de unirse a la clase del usuario: {{ petition?.client?.name || 'Usuario no definido' }}</h3>
+    <div>
+        <h4>Mensaje: {{ petition.expanded ? petition.message : petition.message.substring(0, 40) + '...' }}</h4>
+        <h4>Fecha: {{ petition.date | date: 'medium' }}</h4>
+        <h4>Estado: {{ petition.state || 'no está especificado todavía' }}</h4>
+
+        <h4>Nombre del cliente: {{ petition.client?.name || 'Usuario no definido' }}</h4>
+        <!-- Usamos '?' para acceder a 'user' solo si está definido -->
+        <h4>Correo electrónico del cliente: {{ petition.client?.mail || 'Usuario no definido' }}</h4>
+        <!-- Usamos '?' para acceder a 'user' solo si está definido -->
+        <div style="display: flex; gap: 10px;">
+            <button (click)="toggleExpand(petition)" class="round-button"
+                style="background-color: gray; color: white; width: 120px; height: 40px;">{{ petition.expanded ?
+                'Colapsar' : 'Expandir' }}</button>
+            <button *ngIf="isTeacher" (click)="acceptPetition(petition)" class="round-button"
+                style="background-color: blue; color: white; width: 120px; height: 40px;">Aceptar</button>
+            <!-- Cambiamos el color de fondo y el color del texto del botón de aceptar -->
+            <button *ngIf="isTeacher" (click)="denyPetition(petition)" class="round-button"
+                style="background-color: red; color: white; width: 120px; height: 40px;">Denegar</button>
+            <!-- Cambiamos el color de fondo y el color del texto del botón de denegar -->
+        </div>
+    </div>
+
+    <!-- Mostrar el contenido adicional si la petición está expandida -->
+    <div *ngIf="petition.expanded">
+        <!-- Aquí puedes agregar cualquier contenido adicional que desees mostrar cuando la petición esté expandida -->
+    </div>
+</div>

@@ -1,0 +1,137 @@
+.background-container {
+    background-image: url('https://i.insider.com/6306391bc9a2da0018096152?width=1000&format=jpeg&auto=webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 60px;
+    font-family: 'Arial', sans-serif;
+}
+
+.button-container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.rounded-button {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2c7d11;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.dropbtn{
+    border-radius: 20px;
+    background-color: #579957;
+   
+}
+.rounded-button:hover {
+    background-color: #0056b3;
+}
+
+/* Alineación del menú desplegable a la izquierda */
+
+
+.row.class-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 3%;
+    margin-right: 3%;
+    position: relative;
+    z-index: 1;
+}
+
+.col-md-3.mb-4 {
+    flex: 0 0 calc(25% - 2.25%);
+    margin-bottom: 20px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+ 
+  margin-right: auto;
+  margin-left: auto;
+  width: 100px;
+  height: 300px;
+  
+ 
+}
+.butondelete{
+    background-color: red;
+    border-radius: 10px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.butonedit{
+    background-color: green;
+     border-radius: 10px;
+     width: 150px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+ 
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 0;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.right-aligned-button {
+    text-align: right;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Ajuste para tablets */
+@media (min-width: 576px) and (max-width: 1032px) {
+    .row.class-card-container {
+        margin-left: 3%;
+        margin-right: 3%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+  
+    .col-md-3.mb-4 {
+        flex: 0 0 calc(50% - 2.25%);
+        margin-bottom: 20px;
+    }
+}
+
+/* Ajuste para pantallas más grandes */
+@media (min-width: 1032px) and (max-width: 1032px) {
+    .row.class-card-container {
+        margin-left: 3%;
+        justify-content: center;
+    }
+
+    .col-md-3.mb-4 {
+        flex: 0 0 calc(25% - 2.25%);
+        margin-bottom: 20px;
+    }
+}

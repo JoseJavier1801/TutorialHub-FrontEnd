@@ -1,0 +1,31 @@
+.mailbox-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 60px;
+    font-family: 'Arial', sans-serif;
+}
+
+.mailbox-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 20px;
+  background-color: rgb(52, 58, 64);
+  padding: 10px; /* Añade padding al título */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.mailbox-info {
+  color: #ffffff;
+  font-size: 16px;
+  margin-top: 20px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}

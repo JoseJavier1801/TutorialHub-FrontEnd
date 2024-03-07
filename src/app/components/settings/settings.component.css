@@ -1,0 +1,38 @@
+.settings-container {
+  position: relative;
+}
+
+.settings-button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.settings-menu {
+  position: absolute;
+  top: 40px; /* Ajusta la posición vertical del menú */
+  right: 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.settings-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.settings-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.settings-menu li:hover {
+  background-color: #ddd;
+}

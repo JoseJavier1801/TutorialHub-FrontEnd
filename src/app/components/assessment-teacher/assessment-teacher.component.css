@@ -1,0 +1,14 @@
+.assessment-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(173, 169, 109);
+}
+
+.rating {
+  color: gold;
+}
+
+.comment {
+  margin-top: 5px;
+}

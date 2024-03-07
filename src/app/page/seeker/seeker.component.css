@@ -1,0 +1,121 @@
+/* styles.css */
+
+@import 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css';
+
+/* Estilos generales */
+.background-container {
+  min-height: 100vh;
+  overflow-y: hidden;
+  padding-top: 60px; /* Añade un padding superior para evitar solapamientos con la barra de navegación */
+  font-family: 'Arial', sans-serif;
+}
+
+hr {
+  border: none; /* Eliminamos el borde predeterminado */
+  border-top: 5px solid white; /* Añadimos un borde superior de 5px con color blanco */
+  width: 25%; /* Establecemos el ancho al 25% del contenedor padre */
+  margin: 0 auto; /* Centramos horizontalmente */
+}
+
+.title {
+  color: white;
+  text-align: center;
+  border: 2px solid rgb(13, 110, 253);
+  border-radius: 12px;
+  margin-bottom: 4%;
+  padding: 10px 20px; /* Ajustamos el espacio dentro del contenedor */
+}
+
+.seeker-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos pequeños */
+  justify-content: space-around; /* Distribuye uniformemente los elementos */
+  padding: 20px; /* Añade un padding para evitar que los elementos se peguen al borde de la pantalla */
+  box-sizing: border-box; /* Asegura que el padding no incremente el ancho total */
+}
+
+.form-container {
+  background-color: rgb(52, 58, 64);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgb(230, 226, 226, 0.5);
+  margin-bottom: 0; /* Elimina el margen inferior del formulario */
+  width: calc(35% - 40px); /* Ajusta el ancho con margen incluido */
+  box-sizing: border-box; /* Asegura que el padding no incremente el ancho total */
+}
+
+.form-group {
+  margin-bottom: 15px;
+  font-size: 16px;
+  border-color: #11A0D9;
+  color: #ffffff;
+}
+
+label {
+  color: #ffffff;
+  margin-bottom: 5px;
+  display: block; /* Aseguramos que cada etiqueta esté en una línea separada */
+}
+
+input {
+  width: calc(100% - 20px); /* Ajusta el ancho con padding incluido */
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: white;
+  color: #000000; /* Cambiamos el color del texto para mejorar la legibilidad */
+  font-family: 'Arial', sans-serif;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #11A0D9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agregamos una transición suave al color de fondo */
+}
+
+button:hover {
+  background-color: rgb(13, 110, 253); /* Cambiamos el color al pasar el mouse */
+}
+
+.map-container {
+  width: 900px; /* Ajusta el ancho con margen incluido */
+  height: 500px; /* Ajusta la altura según sea necesario */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px; /* Añade margen inferior para separarlo de otros elementos */
+}
+
+/* Ajusta el margen superior de la primera fila de tarjetas de clase */
+.row:first-child {
+  margin-top: 20px; /* Agrega un margen superior para separar las tarjetas del formulario */
+}
+
+/* Consulta de medios para tabletas */
+@media only screen and (max-width: 1024px) {
+  /* Ajusta el margen superior de la primera fila de tarjetas de clase en tabletas */
+  .row:first-child {
+    margin-top: 10px; /* Reduce el margen superior en tabletas */
+  }
+}
+
+/* Consulta de medios para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+  /* Ajusta el margen superior de la primera fila de tarjetas de clase en dispositivos móviles */
+  .row:first-child {
+    margin-top: 10px; /* Reduce aún más el margen superior en dispositivos móviles */
+  }
+
+.form-group{
+  width: 100%;
+}
+.form-container{
+width: 100%;
+}
+}

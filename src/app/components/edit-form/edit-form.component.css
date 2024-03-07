@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+button {
+    margin-top: 5px; /* Espacio entre el botón y el elemento anterior */
+    width: 200px; /* Ancho del botón */
+}
+.container{
+    background-color: rgb(108, 105, 102);
+}

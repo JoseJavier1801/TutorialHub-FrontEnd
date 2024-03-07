@@ -1,0 +1,36 @@
+<div class="card" style="width: 18rem;">
+    <!-- Cuerpo de la tarjeta -->
+    <img class="card-img-top" (click)="expandCard()"
+        [src]="classData?.teacher?.photo ? 'data:image/jpeg;base64,' + classData.teacher.photo : '/assets/foto/logo2.png'"
+        alt="Teacher Photo">
+
+    <div class="card-body">
+        <!-- Contenido de la tarjeta -->
+        <p class="card-text"><strong>Profesor:</strong> {{ classData?.teacher?.name || 'No especificado' }}</p>
+        <p class="card-text"><strong>Categoría:</strong> {{ classData.category || 'No especificada' }}</p>
+        <p class="card-text"><strong>Tipo:</strong> {{ classData?.type || 'No especificado' }}</p>
+        <p class="card-text"><strong>Localidad:</strong> {{ classData.localidad || 'No especificada' }}</p>
+        <p class="card-text"><strong>Duración:</strong> {{ classData.duration || 'No especificada' }}h</p>
+        
+
+     
+
+        <div class="d-flex justify-content-between mt-3">
+            <div class="button-container-small">
+                <button *ngIf="isProfileView" class="btn btn-danger" (click)="confirmDelete()">Eliminar</button>
+            </div>
+            <div class="button-container-small">
+                <button *ngIf="isProfileView" class="btn btn-primary" (click)="toggleEditForm()">Modificar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Formulario de edición -->
+<div class="card" style="width: 18rem;" *ngIf="isEditing">
+    <app-edit-form [classData]="classData" [classId]="classId"></app-edit-form>
+</div>
+
+<div class="card" style="width: 18rem;" *ngIf="isExpanded">
+    <app-class-expansion [classData]="classData" (closePopupEvent)="closePopup()"></app-class-expansion>
+</div>
+
